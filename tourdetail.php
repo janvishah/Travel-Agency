@@ -1,5 +1,5 @@
 <?php
-function detail($Day,$Place,$Text)
+function detail($Day)
 {
 	echo "</br>";
 	echo <<<_END
@@ -8,20 +8,21 @@ _END;
 			echo "<b>";
 				echo "<span >";
 					echo "Day &nbsp;";					
-					Print $Day."::";									
-				echo "</span>";
-				echo "<span>";		
-					Print $Place;					
-				echo "</span>";
+					Print $Day.":";									
+				echo "</span>";				
 			echo "</b>";
 		echo "</div >";
-			
+}
+
+function daydetail($Text)
+{			
 		echo <<<_END
 		<div class="tourid text">			
 _END;
 			echo "<span id='pid'>";	
 				Print $Text;
 			echo "</span>";
-		echo "</div>";			
-}
+		echo "</div>";	
+}		
+
 ?>

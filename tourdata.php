@@ -1,18 +1,17 @@
 <?php
 
-function data($Tour_Id,$Days,$Nights)
+function data($Id1,$Name,$Days,$Nights,$dates)
 {
 	echo "</br>";
-	echo "</br>";
-	$id = $Tour_Id;																						
+	echo "</br>";																						
 	
 	echo "<div id='tourid'>";				
 		echo <<<_END
 		<span class="tourdata head ">						
 _END;
 			echo "<b>";
-				echo "Tour ID:";
-				echo  $Tour_Id;
+				echo "Name:";
+				echo  $Name;
 			echo"</b>";
 		echo "</span>";
 	echo "</div>";
@@ -27,6 +26,15 @@ _END;
 		echo "</span>";
 		echo "<span class='data'>";
 			echo $Days; 
+		echo "</span>";		
+	echo "</div>";
+	
+	echo "<div>";
+		echo "<span class='tourdata head'>";
+			echo "Nights:";
+		echo "</span>";
+		echo "<span class='data'>";
+			echo $Nights;
 		echo "</span>";
 	echo "</div>";
 			
@@ -34,10 +42,10 @@ _END;
 		echo <<<_END
 		<span class="tourdata head">						
 _END;
-			echo "Nights:";
+			echo "Date:";
 		echo "</span>";
 		echo "<span class='data'>";
-			echo $Nights;
+			echo $dates;
 		echo "</span>";
 	echo "</div>";
 		
@@ -48,13 +56,23 @@ _END;
 			echo "Places:";
 		echo "</span>";
 		echo "<span class='data'>";
-			$result1=mysql_query("SELECT Place FROM tour_place where Tour_Id=$id");
+		
 			include_once ('./connection.php');
-			while($row1=mysql_fetch_array($result1))
+			
+			$result2=mysql_query("SELECT Place_Id FROM tour_place where Tour_Id=$Id1");
+			while($row2=mysql_fetch_array($result2))
 			{
-				Print $row1['Place']; 
-				Print "-";
+				$pla= $row2['Place_Id']; 				
+									
+				$result3=mysql_query("SELECT Place FROM place where Id=$pla");
+			
+				while($row3=mysql_fetch_array($result3))
+				{
+					Print $row3['Place']; 
+					Print "-";
+				}
 			}
+			
 		echo "</span>";
 	echo "</div>";
 		
@@ -62,7 +80,7 @@ _END;
 	
 	echo "<div class='data'>";	
 		echo "<b>";
-			$pid=$Tour_Id;
+			$pid=$Id1;
 			echo "<a href=ViewDetails.php?id=$pid>Tour Details</a>";
 		echo "</b>";				
 	echo "</div>";		

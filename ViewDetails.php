@@ -11,30 +11,44 @@ echo "<html>";
 		include ('Connection.php');
 	
 		$id=$_GET['id'];
-		$result=mysql_query("SELECT * FROM tourdays where Tour_Id= '$id'");
-		$result1 = mysql_query("SELECT Tour_Name FROM Tour where Tour_Id = $id");
-		$result2 =mysql_query("SELECT Place FROM tour_place where Tour_Id=$id");
-		$row1 = mysql_fetch_array($result1);
-	
+		
+		$result1 = mysql_query("SELECT Package_Location_Id FROM tour where Id = $id");		
+		$row = mysql_fetch_array($result1);
+		$plid = $row['Package_Location_Id'];
+		$result3 = mysql_query("SELECT Location FROM Package_Location where Id = $plid");
+		$row3 = mysql_fetch_array($result3);
 		echo "<div id='pageheading'>";
 
-				$Heading=$row1['Tour_Name']."  Holiday Package:";						//used by head.inc for main heading
+				$Heading=$row3['Location']."  Holiday Package:";						//used by head.inc for main heading
 				include ('./head.inc');		
 	
-				if($row1['Tour_Name']=='Kerala')
+				if($row3['Location']=='Kerala')
 				{	
 					echo "<script src='js/Kerala.js' type='text/javascript'></script>";
 					$url = "image/Kerala/pr1.jpg"; 						//Used by Slide.php for url of image
 					$subheading="Indian Tourism";								//Used by Slide.php for sub title
 					include ('./slide.php');
 				}
+				if($row3['Location']=='Kashmir')
+				{	
+					echo "<script src='js/Kashmir.js' type='text/javascript'></script>";
+					$url = "image/Kashmir/pr1.jpg"; 						//Used by Slide.php for url of image
+					$subheading="Indian Tourism";								//Used by Slide.php for sub title
+					include ('./slide.php');
+				}
 				
 				include ('./tourlink.inc');
 				include ('./tourdetail.php');
-				
-				while($row=mysql_fetch_array($result))
+				$result=mysql_query("SELECT * FROM tour_days where Tour_Id= '$id'");
+				while($row1=mysql_fetch_array($result))
 				{
-					detail($row['Day'],$row['Place'],$row['Text']);			//function detail call from tourdetail.php for fetching tour details from database			
+					$dayid=$row1['Day_Id'];
+					detail($row1['Day']);			//function detail call from tourdetail.php for fetching tour details from database			
+					$result2 =mysql_query("SELECT Text FROM days where id=$dayid");	
+					while($row2=mysql_fetch_array($result2))
+					{
+						daydetail($row2['Text']);
+					}
 				}
 	echo <<<_END
 	</body>
