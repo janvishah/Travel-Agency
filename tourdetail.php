@@ -5,24 +5,23 @@ function detail($Day,$Place,$Text)
 	echo <<<_END
 		<div class="tourid head" > 
 _END;
-				echo "<b>";
+			echo "<b>";
 				echo "<span >";
 					echo "Day &nbsp;";					
-					Print $Day;					
-					Print '::';
+					Print $Day."::";									
 				echo "</span>";
 				echo "<span>";		
 					Print $Place;					
 				echo "</span>";
-				echo "</b>";
-	echo "</div >";
+			echo "</b>";
+		echo "</div >";
 			
-			echo <<<_END
-			<div class="tourid text">			
+		echo <<<_END
+		<div class="tourid text">			
 _END;
-				echo "<span id='pid'>";	
-					Print $Text;
-				echo "</span>";
-			echo "</div>";			
+			echo "<span id='pid'>";	
+				Print $Text;
+			echo "</span>";
+		echo "</div>";			
 }
 ?>

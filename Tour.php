@@ -1,15 +1,29 @@
 <?php
 	
+echo "<html>";
+
+	
 	if(isset($_POST['Kerala']))
-		{
-			$page_title = 'Kerala';	
-			include ('./header.php');
-			$pl = "Kerala";
-			$Title="Kerala Holiday Packages";
-			include ('./head.inc');
-			$Title2="Kerala";
-			include ('./slide.inc');
-		}
+	{
+		echo"<script src='js/Kerala.js' type='text/javascript'></script>";
+		$page_name = 'Kerala Tour';											//used by PageName.php file
+		include ('./PageName.php');
+			
+		$pl = "Kerala";
+			
+		echo "<body>";
+		
+			include ('./Navbar.inc');
+			
+			echo "<div id='pageheading'>";
+
+				$Heading="Kerala Holiday Packages"; 						//used by head.inc for main heading
+				include ('./head.inc');
+				
+				$url = "image/Kerala/pr1.jpg"; 						        //Used by Slide.php for url of image
+				$subheading="Kerala Tours";									//Used by Slide.php for sub title
+				include ('./slide.php');
+	}
 ?>
 				<div id=pid>				
 					Kerala regionally referred to as Keralam is a state in the south-west region of India on the Malabar coast. 
@@ -20,15 +34,16 @@
 					The state capital is Thiruvananthapuram, other major cities include Kochi, Kozhikode, Kollam and Thrissur.					
 				</div>
 <?php
-	include ('Connection.php');				
-	$result=mysql_query("SELECT * FROM tour where Tour_Name= '$pl'");
-		include ('./tourdata.php');
+				include ('Connection.php');				
+				$result=mysql_query("SELECT * FROM tour where Tour_Name= '$pl'");
+				include ('./tourdata.php');
 		
-		while($row=mysql_fetch_array($result))
-		{				
-			data($row['Tour_Id'],$row['Days'],$row['Nights']);						
-		}			
-		echo "</div>";
-		echo "</body>";
-	echo"</html>";
-?>
+				while($row=mysql_fetch_array($result))
+				{				
+					data($row['Tour_Id'],$row['Days'],$row['Nights']);		//function call from tourdata.php				
+				}	
+?>				
+			</div>
+		</body>
+</html>
+

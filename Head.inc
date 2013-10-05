@@ -1,6 +1,5 @@
-<div id="pageheading">
-	<div class="head">
-		<h2>
-			<?php echo $Title; ?>
-		</h2>
-	</div>
+<div class="head">
+	<h2>
+		<?php echo $Heading; ?>
+	</h2>
+</div>

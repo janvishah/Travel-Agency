@@ -1,15 +1,26 @@
 <?php
-	$page_title = 'Indian Tour';	
-	include ('./header.php');
 
-	$Title="Indian Holiday Packages";
-	include ('./head.inc');
+echo "<html>";
 
-		$Title2="Indian Tourism";
-		include ('./slide.inc');
-?>	
+	echo "<script src='js/IndianTour.js' type='text/javascript'></script>";
+	
+	$page_name = 'IndianTour';												//used by PageName.php file
+	include ('./PageName.php');
 
-			<form name="form1" method=post action="Tour.php">
+	echo "<body>";
+		
+		include ('./Navbar.inc');
+		echo "<form name='form1' method=post action='Tour.php'>";
+	
+			echo "<div id='pageheading'>";
+
+				$Heading="Indian Holiday Packages"; 						//used by head.inc for main heading
+				include ('./head.inc');
+		
+				$url = "image/Indian Tour/pr1.jpg"; 						//Used by Slide.php for url of image
+				$subheading="Indian Tourism";								//Used by Slide.php for sub title
+				include ('./slide.php');
+?>				
 				<div class="imagediv">	
 					<img src="Image\Chardham.jpg" id="image">
 					<img src="Image\Hydrabad.jpg" id="image">
@@ -33,7 +44,7 @@
 					<button type="submit" class="btn btn2">LehLadakh</button>
 					<button type="submit" class="btn btn3">HimachalPradesh</button>
 				</div>
-			</form>
-		</div>		
+			</div>
+		</form>			
 	</body>
 </html>

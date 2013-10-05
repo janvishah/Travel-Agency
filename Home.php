@@ -1,14 +1,22 @@
 <?php
-	$page_title = 'Home';	
-	include ('./header.php');
-
-	$Title="Welcome to Information Travel";
-	include ('./head.inc');
+echo "<html>";
+	echo "<script src='js/Home.js' type='text/javascript'></script>";
+	$page_name = 'Home';											//used by PageName.php file
+	include ('./PageName.php');
 	
-		$Title2="";
-		include ('./slide.inc');
+	echo "<body>";
+		
+		include ('./Navbar.inc');
+		
+		echo "<div id='pageheading'>";
+			
+			$Heading="Welcome to Information Travel"; 				//used by head.inc for main heading
+			include ('./head.inc');
+	
+			$url = "image/Home/pr1.jpg"; 							//Used by Slide.php for url of image
+			$subheading="";											//Used by Slide.php for sub title
+			include ('./slide.php');
 ?>			
-
-</div>
+		</div>
 	</body>
 </html>
