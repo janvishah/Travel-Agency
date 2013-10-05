@@ -1,0 +1,175 @@
+body
+{
+	background-image:url('bg.jpg');	
+	margin:10px;
+}
+
+#nav
+{
+	list-style-type:none;
+	background-color: #F6F4F0;
+	height:60px;
+	color:blue;
+}
+li
+{
+	Position:relative;
+	top:10px;
+	left:40px;
+	font-size:20;
+	margin-right:20px;
+	display:inline;
+}
+#active
+{
+	background-color:#e7e7e7;
+}
+.imgslide
+{
+	width:800px;
+	height:400px;
+}
+.img2
+{
+	height : 300px;
+	width:800px;
+}
+a:link
+{
+	color:red;
+}
+a:visited
+{
+	color:red;
+}
+.head
+{
+	color:blue;
+}
+.navhead
+{
+	font-size:30px;
+	Position:relative;
+	left:330px;
+}
+#pageheading
+{
+	margin-top:30px;
+	margin-right:40px;
+	margin-left:40px;
+}
+.slide
+{
+	text-align:center
+}
+.imagediv
+{
+	margin-top:30px;
+}
+#image
+{
+	width:250px;
+	height:250px;
+	margin-right:30px;
+}
+.btn
+{
+	font-size:16px;
+	color:red;
+	background-color:pink;
+}
+
+.btn1
+{
+	position:relative;
+	left:90px;
+}
+.btn2
+{
+	position:relative;
+	left:290px;
+}
+.btn3
+{
+	position:relative;
+	left:440px;
+}
+.btn4
+{
+	position:relative;
+	left:190px;
+}
+#pid
+{	
+	font-size:14px;
+	font-family:Arial;
+	text-align:justify;
+}
+
+.tourdata
+{
+	position:relative;
+	left:80px;
+	font-size: 18px;
+}
+
+.data
+{
+	position:absolute;
+	left:200px;
+	font-size: 16px;
+}
+.tourid
+{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.text
+{
+	font-size:18px;
+	color:red;
+}
+.obj7
+{
+	Position:relative;
+	left:150px;
+	margin-top:30px;
+	margin-bottom:30px;	
+}
+.sizemargin
+{
+	font-size: 16px;
+	margin-bottom:30px;
+}
+.obj10
+{
+	position:absolute;
+	left:100px;	
+}
+.obj11
+{
+	position:absolute;
+	left:200px;
+}
+.obj12
+{
+	position:absolute;
+	left:500px;
+}
+
+.obj13
+{
+	position:relative;
+	left:280px;
+	
+}
+.obj14
+{
+	position:relative;
+	left:350px;	
+}
+.obj15
+{
+	Position:absolute;
+	left:700px;
+}
