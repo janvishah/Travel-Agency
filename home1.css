@@ -68,8 +68,8 @@ a:visited
 }
 #image
 {
-	width:250px;
-	height:250px;
+	width:200px;
+	height:200px;
 	margin-right:30px;
 }
 .btn
@@ -79,26 +79,13 @@ a:visited
 	background-color:pink;
 }
 
-.btn1
+.packagebtn
 {
 	position:relative;
 	left:90px;
+	top:-100px;
 }
-.btn2
-{
-	position:relative;
-	left:290px;
-}
-.btn3
-{
-	position:relative;
-	left:440px;
-}
-.btn4
-{
-	position:relative;
-	left:190px;
-}
+
 #pid
 {	
 	font-size:14px;
@@ -129,47 +116,60 @@ a:visited
 	font-size:18px;
 	color:red;
 }
-.obj7
+.packagelable
 {
 	Position:relative;
 	left:150px;
 	margin-top:30px;
 	margin-bottom:30px;	
 }
-.sizemargin
+.packagedata
 {
 	font-size: 16px;
 	margin-bottom:30px;
 }
-.obj10
+.packagetext
 {
 	position:absolute;
 	left:100px;	
 }
-.obj11
+.packagetype
 {
 	position:absolute;
 	left:200px;
 }
-.obj12
+.packagerate
 {
 	position:absolute;
 	left:500px;
 }
 
-.obj13
+.packageid
 {
 	position:relative;
 	left:280px;
 	
 }
-.obj14
+.type
 {
 	position:relative;
 	left:350px;	
 }
-.obj15
+.rate
 {
-	Position:absolute;
-	left:700px;
+	Position:relative;
+	left:400px;
+}
+
+.packagenot
+{
+	position:absolute;
+	left:600px;	
+}
+
+.selecteno
+{
+	position:relative;
+	left:400px;
+	
 }

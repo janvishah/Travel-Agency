@@ -3,7 +3,7 @@
 			Information
 		</li>
 	
-		<li id="active">
+		<li>
 			<a href="Home.php" id=obj4>Home</a>
 		</li>
 	

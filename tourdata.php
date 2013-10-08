@@ -59,12 +59,12 @@ _END;
 		
 			include_once ('./connection.php');
 			
-			$result2=mysql_query("SELECT Place_Id FROM tour_place where Tour_Id=$Id1");
+			$result2=mysql_query("SELECT Place_Id FROM tour_places where Tour_Id=$Id1");
 			while($row2=mysql_fetch_array($result2))
 			{
 				$pla= $row2['Place_Id']; 				
 									
-				$result3=mysql_query("SELECT Place FROM place where Id=$pla");
+				$result3=mysql_query("SELECT Place FROM places where Id=$pla");
 			
 				while($row3=mysql_fetch_array($result3))
 				{

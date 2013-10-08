@@ -1,4 +1,4 @@
-var img = new Array(10); //array to hold the images
+ var img = new Array(10); //array to hold the images
  var start = null; //start pointer
  var counter = 1; //counts the image sequences
  var delayTime = null; //user defined
